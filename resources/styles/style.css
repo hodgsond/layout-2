@@ -25,8 +25,8 @@ html {
 body {
 	display: flex;
 	flex-flow: column nowrap;
-	height: 100vh;
-	width: 100vw;
+	min-height: 100vh;
+	min-width: 100vw;
 }
 
 
@@ -67,19 +67,20 @@ h2, h3, p {
 	flex-flow: column nowrap;
 }
 
-.main p span {
+main p span {
 	background-color: black;
 	color: white;
 	border-radius: 10px;
 	padding: 3px;
 }
 
-.main {
+main {
 	background-color: var(--main-color);
 	padding: 60px 25px 50px 25px;
+	flex-grow: 1;
 }
 
-.main img {
+main img {
 	max-width: 400px;
 	height: auto;
 }
@@ -95,6 +96,7 @@ h2, h3, p {
 .content {
 	background-color: var(--content-color);
 	padding: 25px 0px;
+	flex-grow: 1;
 }
 
 .content img {
@@ -112,7 +114,8 @@ h2, h3, p {
 
 footer {
 	background-color: var(--footer-color);
-	flex: 1 1 50px;
+	height: 40px;
+	text-align: center;
 }
 
 @media (min-width: 750px) {
@@ -135,7 +138,7 @@ footer {
 		z-index: -1;
 	}
 
-	.main .inner-column {
+	main .inner-column {
 		flex-flow: row-reverse wrap;
 		align-items: center;
 		justify-content: center;
@@ -187,10 +190,10 @@ footer {
 	#square1 {
 		display: inline;
 		position: absolute;
-		width: 1000px;
-		max-height: 1000px;
+		min-width: 1500px;
+		max-height: 1500px;
 		top: -400px;
-		left: -200px;
+		left: -600px;
 		fill: var(--svg-fill-square);
 		transform: rotate(-7.5deg);
 		z-index: -2;
@@ -199,20 +202,20 @@ footer {
 	#square2 {
 		display: inline;
 		position: absolute;
-		width: 1000px;
-		max-height: 1000px;
+		min-width: 1500px;
+		max-height: 1500px;
 		top: -400px;
-		left: -150px;
+		left: -550px;
 		fill: var(--svg-fill-square);
 		transform: rotate(-7.5deg);
 		z-index: -3;
 	}
 
-	.main .inner-column {
+	main .inner-column {
 		flex-flow: row nowrap;
 	}
 
-	.main img {
+	main img {
 		max-width: 500px;
 	}
 
